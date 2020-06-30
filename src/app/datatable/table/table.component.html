@@ -1,0 +1,42 @@
+
+<div>
+    <button class="btn btn-primary" (click)="onAddClick()">Add</button>
+</div>
+<table datatable class="row-border hover">
+    <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Salary</th>
+          <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of datatableData;">
+          <td>{{data.name}}</td>
+          <td>{{data.age}}</td>
+          <td>{{data.salary}}</td>
+          <td>
+              <button class="btn btn-primary" (click)="onEdit(data.id)">Edit</button>
+              <button type="button" class="btn btn-danger" (click)="onDelete(data.id)">Delete</button>              
+          </td>
+        </tr>  
+    </tbody>
+</table>
+
+
+<!-- <button class="btn btn-lg btn-outline-primary" (click)="onDelete(mymodal)">Open My Modal</button>
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">×</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    This is example from ItSolutionStuff.com
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>
+  </div>
+</ng-template> -->

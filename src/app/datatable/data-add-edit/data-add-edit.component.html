@@ -1,0 +1,38 @@
+<div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
+        <h2>{{mode}} Item</h2>
+        <form [formGroup]="itemForm" (submit)="onSubmit()">
+
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input class="form-control" id="name" formControlName="name">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="name">Age</label>
+                        <input class="form-control" id="age" formControlName="age">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="form-group">
+                        <label for="name">Salary</label>
+                        <input class="form-control" id="salary" formControlName="salary">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <button class="btn btn-success" [disabled]="!itemForm.valid" type="submit">Save</button>
+                    <button class="btn btn-danger" type="button" (click)="onCancel()">Cancel</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
